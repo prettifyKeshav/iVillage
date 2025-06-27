@@ -1,0 +1,1011 @@
+@import '../_var'
+
+.banner 
+    &.home-banner 
+        background: #fff
+        &::before
+            display: none
+        .bg 
+            position: relative
+            background-color: #FFE8DD
+            height: 100vh
+            @include media(991)
+                height: 50vh
+            @include media(540)
+                height: 50vh
+            &::before
+                content: ""
+                position: absolute
+                width: 100%
+                height: 100%
+                right: 0
+                top: 0
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 17.86%, rgba(0, 0, 0, 0.75) 83.52%)
+        .banner-wrapper
+            left: 50%
+            top: 80%
+            transform: translate(-50%, -50%)
+            @include media(768)
+                width: 400px
+            @include media(540)
+                width: 300px
+            .container
+                .content
+                    h1
+                        font-size: 80px
+                        font-family: Poppins
+                        font-weight: 700
+                        font-size: 48px
+                        line-height: 48px
+                        letter-spacing: 0%
+                        text-align: center
+                        margin-bottom: 20px
+                        @include media(1024)
+                            font-size: 70px
+                        @include media(991)  
+                            font-size: 65px
+                        @include media(768)
+                            font-size: 50px
+                        @include media(540)
+                            font-size: 33px
+                            line-height: 1.1
+                    p
+                        color: $white
+                        font-family: Poppins
+                        font-weight: 600
+                        font-size: 16px
+                        text-align: center
+                        @include media(540)
+                            display: none
+        .pin-img
+            position: absolute
+            right: 0
+            z-index: 5
+            overflow: hidden
+            @include media(540)
+                width: 110px
+                top: 301.4px
+            img
+                transform: rotate(0.8deg)
+    .heading
+        .swiper-nav
+            position: absolute
+            right: 0
+            top: 20%
+            display: flex
+            align-items: center
+            width: max-content
+            button
+                flex: 0 1 auto
+                width: 45px
+                height: 45px
+                border: 2px solid var(--primary)
+                border-radius: 50%
+                svg
+                    vertical-align: middle
+                    path 
+                        fill: var(--primary)
+                        stroke-width: 5px
+            .home-category-fraction
+                flex: 1
+                padding: 0 10px
+                color: var(--primary)
+                font-weight: 400
+                font-size: 16px
+    .category_slider_sec
+        padding: 50px 0
+        .item
+            text-align: center
+            p
+                font-size: 16px
+                font-weight: 400
+
+.story-secA
+    background: #fff
+    overflow: hidden
+    padding: 50px 0
+    .flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 50px
+        @include media(991)
+            display: block
+        .flex-item
+            width: 48%  
+            @include media(991)
+                width: 100%
+        .flex-item:first-child
+            border-radius: 15px
+            overflow: hidden
+            @include media(991)
+                margin-bottom: 30px 
+        .flex-item:last-child
+            .heading-img
+                width: 80px
+                margin: auto
+                @include media(540)
+                    width: 50px
+                img
+                    animation: wiggle 2s ease-in-out infinite
+                    transform-origin: center
+            .heading
+                @include media(540)
+                    margin-top: 0
+                h2
+                    color: var(--primary)
+            p
+                font-family: Poppins
+                font-weight: 400
+                font-size: 16px
+                margin: 20px 0
+                color: $text
+
+.story-secB
+    background: #fff
+    overflow: hidden
+    .flex-box
+        display: flex
+        text-align: center
+        .flex-item
+            padding: 100px 50px
+            img
+                width: 50px
+                margin-bottom: 20px
+            h2
+                font-family: Poppins
+                font-weight: 600
+                font-size: 36px
+                margin-bottom: 10px
+            p
+                font-family: Poppins
+                font-weight: 600
+                font-size: 16px
+                color: $white
+                width: 60%
+                margin: auto
+
+        .flex-item:first-child
+            background: #EA4A38
+            width: 50%
+        .flex-item:last-child
+            width: 50%
+            background: #1DA9E1
+
+.story-secC
+    background: #fff
+    padding: 50px 0 0px 0
+    overflow: hidden
+    .communities
+        background: #F6ECE2
+        margin: 50px 0 0px 0
+        position: relative
+        padding-top: 100px
+        &::before
+            content: ""
+            position: absolute
+            width: 100%
+            height: 100%
+            background: linear-gradient(360deg, #EEEEEE 0%, #FFEAE0 100%)
+            z-index: -1
+            top: 0
+            left: 0
+        .creativity-badge
+            position: absolute
+            top: -80px // pulls it up into the banner
+            left: 50%
+            transform: translateX(-50%)
+            text-align: center
+            z-index: 3
+            overflow: hidden
+            .bg
+                width: 160px
+                height: 160px
+                border-radius: 50%
+                background: #fff
+                object-fit: cover
+                background-clip: content-box, border-box
+                .heading-img
+                    width: 80px
+                    margin: auto
+                    position: relative
+                    top: 50px
+                    @include media(540)
+                        width: 50px
+                    img
+                        animation: wiggle 2s ease-in-out infinite
+                        transform-origin: center
+        .container
+            .heading
+                max-width: 50%
+                margin: auto
+                text-align: center
+                @include media(540)
+                    max-width: 100% 
+
+                h2
+                    font-weight: 600
+                    font-size: 38px
+                    line-height: 100%
+                    @include media(540)
+                        font-size: 24px
+                        line-height: 1.2
+            .timeline
+                padding: 4rem 2rem
+                .timeline-container
+                    position: relative
+                    padding: 2rem 0
+                    .timeline-line
+                        position: absolute
+                        left: 50%
+                        top: 0
+                        bottom: 0
+                        width: 2px
+                        background-color: #EA4A38
+                        transform: translateX(-50%)
+                        @include media(991)
+                            left: 0
+                        @include media(540)
+                            left: 0
+                    .timeline-item
+                        position: relative
+                        max-width: 500px
+                        padding: 20px 10px
+                        box-sizing: border-box
+                        border-radius: 10px
+                        background-color: white
+                        @include media(991)
+                            max-width: 100%
+                        &.left
+                            left: 0
+                            text-align: left
+                            @include media(991)
+                                left: 20px  
+                                margin-bottom: 20px
+                            @include media(540)
+                                left: 20px  
+                                margin-bottom: 20px
+                            .timeline-dot
+                                border-radius: 50%
+                                width: 25px
+                                height: 25px
+                                background: var(--white)
+                                position: absolute
+                                left: 595px
+                                top: 92px
+                                border: 8px solid #EA4A38
+                        &.right
+                            left: 58%
+                            text-align: left
+                            @include media(991)
+                                left: 20px  
+                                margin-bottom: 20px
+                            @include media(540)
+                                left: 20px  
+                                margin-bottom: 20px
+                            .timeline-dot
+                                border-radius: 50%
+                                width: 25px
+                                height: 25px
+                                background: var(--white)
+                                position: absolute
+                                left: -108px
+                                top: 92px
+                                border: 8px solid #EA4A38
+                        .box
+                            display: flex
+                            align-items: flex-start
+                            gap: 20px
+                            .box-image 
+                                margin: 0
+                                flex-shrink: 0
+                                img 
+                                    width: 200px
+                                    height: auto
+                                    border-radius: 10px
+                                    object-fit: cover
+                            
+                            .box-content 
+                                flex: 1
+                                h3
+                                    font-family: Poppins
+                                    font-weight: 600
+                                    font-size: 20px
+                                    line-height: 24px
+                                    color: black
+                                    margin-bottom: 10px
+                                p
+                                    font-family: Poppins
+                                    font-weight: 400
+                                    font-size: 14px
+                                    line-height: 18px
+                                    color: $text
+
+.home-secD
+    // border-bottom: 2px dashed var(--secondary)
+    padding: 50px 0
+    background: #f1f1f2
+    position: relative
+    overflow: hidden
+    @include media(540)
+        padding: 40px 0
+    .heading-img
+        width: 80px
+        margin: auto
+        @include media(540)
+            width: 50px
+        img
+            animation: wiggle 2s ease-in-out infinite
+            transform-origin: center
+    .heading
+        margin-top: 10px
+        h2
+            color: var(--primary)
+
+    .review-slider-part
+        padding: 50px 0 
+        position: relative
+        @include media(540)
+        padding: 40px 0
+        .swiper-nav
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 104%
+            position: absolute
+            top: 50%
+            left: -2%
+            translate: 0% -50%
+            z-index: 2
+            @include media(540)
+                display: none
+            button
+                width: 45px
+                height: 45px
+                background-color: $white
+                border-radius: 50%
+                box-shadow: 0px 5px 15px 0 #00000059
+                &.swiper-prev
+                    &:hover
+                        svg
+                            translate: -5px 0
+                &.swiper-next
+                    &:hover
+                        svg
+                            translate: 5px 0
+                svg
+                    transition: .3s ease
+                    vertical-align: middle
+                    path 
+                        fill: $black
+        .client-review-slider
+            .swiper-slide
+                height: 454px
+                border-radius: 15px
+                text-align: center
+                background: #F3EFEF
+                position: relative
+                overflow: hidden
+            .swiper-slide:nth-child(3n+1) .upper-sec 
+                background-color: #1DA9E1
+                height: 178px
+            .swiper-slide:nth-child(3n+2) .upper-sec
+                background-color: #A83B5C
+                height: 178px
+            .swiper-slide:nth-child(3n) .upper-sec
+                background-color: #ED5F40
+                height: 178px
+            .upper-sec .name p
+                position: absolute
+                top: 13%
+                left: 50%
+                transform: translate(-50%, -50%)
+                font-family: Poppins
+                font-weight: 600
+                font-size: 16px
+                line-height: 24px
+                color: $white
+                width: 100%
+            .image 
+                width: 145px
+                height: 145px
+                position: absolute
+                top: 38%
+                left: 50%
+                transform: translate(-50%, -50%)
+                img
+                    border-radius: 50%
+            .icon
+                width: 65px
+                height: 65px
+                position: absolute
+                top: 35%
+                left: 84%
+                transform: translate(-50%, -50%)
+            .middle-sec
+                position: absolute
+                top: 70%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 100%
+                text-align: center
+                .text p
+                    color: $text
+                    max-width: 80%
+                    margin: auto
+                    @include media(540)
+                        font-size: 14px
+            .bottom-sec
+                position: absolute
+                top: 90%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 100%
+                text-align: center
+                display: flex
+                justify-content:    center
+                align-items: center
+                padding: 0 40px
+                color: $text
+                a
+                    color: #EA4A38
+                    cursor: pointer
+                    font-family: Poppins
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 24px
+
+                    &:hover
+                        color: #f1311b
+                        
+.home-secE
+    padding: 50px 0
+    position: relative
+    overflow: hidden
+    @include media(540)
+        padding: 40px 0
+    .heading-img
+        width: 80px
+        margin: auto
+        @include media(540)
+            width: 50px
+        img
+            animation: wiggle 2s ease-in-out infinite
+            transform-origin: center
+    .heading
+        margin-top: 10px
+        h2
+            color: var(--primary)
+            margin-bottom: 10px
+        p
+            max-width: 80%
+            margin: auto
+    .story-slider4-part
+        padding: 50px 0 
+        position: relative
+        @include media(540)
+        padding: 40px 0
+        .swiper-nav
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 104%
+            position: absolute
+            top: 50%
+            left: -2%
+            translate: 0% -50%
+            z-index: 2
+            @include media(540)
+                display: none
+            button
+                width: 45px
+                height: 45px
+                background-color: $white
+                border-radius: 50%
+                box-shadow: 0px 5px 15px 0 #00000059
+                &.swiper-prev
+                    &:hover
+                        svg
+                            translate: -5px 0
+                &.swiper-next
+                    &:hover
+                        svg
+                            translate: 5px 0
+                svg
+                    transition: .3s ease
+                    vertical-align: middle
+                    path 
+                        fill: $black
+        .story-slider4-slider
+            .swiper-slide
+                height: 416px
+                text-align: center
+                background: #F3EFEF
+                position: relative
+                overflow: hidden
+                border-radius: 5px
+            .swiper-slide:nth-child(3n+1) .upper-sec 
+                background-color: #1DA9E1
+                height: 155px
+            .swiper-slide:nth-child(3n+2) .upper-sec
+                background-color: #1DA9E1
+                height: 155px
+            .swiper-slide:nth-child(3n) .upper-sec
+                background-color: #1DA9E1
+                height: 155px
+            .upper-sec .name
+                position: absolute
+                top: 65%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 100%
+                p
+                    font-family: Poppins
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 24px
+                    color: $black
+                    width: 100%
+                p:last-child
+                    color: #666666
+            .image 
+                width: 145px
+                height: 145px
+                position: absolute
+                top: 38%
+                left: 50%
+                transform: translate(-50%, -50%)
+                img
+                    border-radius: 50%
+            .icon
+                width: 65px
+                height: 65px
+                position: absolute
+                top: 35%
+                left: 84%
+                transform: translate(-50%, -50%)
+                display: none
+            .middle-sec
+                position: absolute
+                top: 70%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 100%
+                text-align: center
+                // .social-icon
+
+            .bottom-sec
+                position: absolute
+                top: 90%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 100%
+                text-align: center
+                display: flex
+                justify-content:    center
+                align-items: center
+                padding: 0 40px
+                color: $text
+                a
+                    color: #EA4A38
+                    cursor: pointer
+                    font-family: Poppins
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 24px
+
+                    &:hover
+                        color: #f1311b
+                        
+
+
+
+// .home-secC
+//     padding-bottom: 20px
+//     border-bottom: 2px dashed var(--secondary)
+//     &.banner
+//         &::before
+//             display: none
+//     .bg
+//         @include before()
+//         &::before
+//             background: linear-gradient(358deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)
+//         .banner-wrapper
+//             left: 50%
+//             translate: -50% -50%
+//             max-width: 540px
+//             .content
+//                 text-align: center
+//                 .icon
+//                     img
+//                         width: 50px
+//                     p
+//                         font-size: 20px
+//                         line-height: 1.2
+//                         letter-spacing: 8px
+//                         text-transform: uppercase
+//                         font-weight: 400
+//                         color: $white
+//                         padding: 20px 0 20px
+//                 .heading
+//                     img
+//                         width: 380px
+//                     p
+//                         color: $white
+//                         padding: 15px 0 40px
+//                         font-weight: 400
+//                         font-size: 15px
+//                         line-height: 1.5
+
+// Worked on adaayein eCommerce website currected all the bugs and made it responsive . Also, made the website more user-friendly and visually appealing. I also made the website more accessible for users with disabilities. I also made the website mor
+
+
+// .home-secC
+//     padding:50px 0
+//     background: #fff
+//     position: relative
+//     overflow: hidden
+//     @include media(540)
+//         padding: 30px 0 50px 0
+//     .heading-img
+//         width: 80px
+//         margin: auto
+//         @include media(540)
+//             width: 50px
+//         img
+//             animation: wiggle 2s ease-in-out infinite
+//             transform-origin: center
+//     .heading
+//         h2
+//             font-family: Poppins
+//             font-weight: 600
+//             font-size: 36px
+//             color: var(--primary)
+//             @include media(540)
+//                 font-size: 26px
+//                 max-width: 80%
+//                 margin: auto
+//     .best_sellers_wrapper
+//         padding: 30px 0 50px
+//         @include media(540)
+//             padding: 30px 0 30px
+//         .bestseller_nav
+//             padding-bottom: 50px
+//             ul
+//                 display: flex
+//                 align-items: center
+//                 justify-content: start
+//                 gap: 30px
+//                 @include media(540)
+//                     overflow-x: auto
+//                     gap: 30px
+//                 li
+//                     position: relative
+//                     color: $text
+//                     padding-bottom: 5px
+//                     transition: .5s ease
+//                     min-width: fit-content
+//                     &.active
+//                         font-weight: 500
+//                         color: var(--primary)
+//                         @include media(540)
+//                             font-size: 14px
+//                         &::before
+//                             width: 100%
+//                     &::before
+//                         content: ""
+//                         position: absolute
+//                         left: 0
+//                         bottom: 0
+//                         width: 0%
+//                         height: 2px
+//                         background-color: var(--primary)
+//                         transition: .5s ease
+                        
+//         .bestseller_nav_content
+//             .bestseller_slider
+//                 .item
+//                     background: #F3F3F3
+//                     overflow: hidden
+//                     border-radius: 15px
+//                     text-align: center
+//                     .product-col
+//                         width: 100%
+//                         height: 342px
+//                         position: relative
+//                         &:hover
+//                             .product-btn
+//                                 transform: translateY(0%) 
+//                         .wishlist
+//                             width: 22px
+//                             position: absolute
+//                             top: 18px
+//                             right: 15px
+//                             .svg
+//                                 transform: scale(1)
+//                                 cursor: pointer
+//                                 // &:hover
+//                                 //     fill: var(--primary)
+//                         .product-img
+//                             width: 100%
+//                             padding: 50px
+//                             height: 270px
+//                             display: flex
+//                             justify-content: center
+//                             align-items: center
+//                             width: 100%
+//                             padding: 50px
+//                             padding: 40px 50px
+//                             overflow: hidden
+//                             &:hover
+//                                 .product-btn
+//                                     transform: translateY(0%)
+//                             img
+//                                 &:hover
+//                                     .product-btn
+//                                         transform: translateY(0%)
+//                         figcaption
+//                             width: 100%
+//                             background-color: #F3F3F3
+//                             position: absolute
+//                             bottom: 0
+//                             .price_wrapper
+//                                 justify-content: center
+//                             h6
+//                                 font-size: 16px
+//                                 line-height: 1.5
+//                                 font-weight: 500
+//                                 color: $black 
+//                                 padding-bottom: 5px
+//                             .flex
+//                                 align-items: center
+//                                 gap: 10px
+//                                 color: $text
+//                                 font-size: 14px
+//                                 padding-bottom: 5px
+//                                 .quant
+//                                     border-right: 1px solid $text
+//                                     padding-right: 10px
+//                             .price
+//                                 font-size: 18px
+//                                 line-height: 1.5
+//                                 font-weight: 500
+//                                 color: $black
+//                         .product-btn
+//                             transform: translateY(100%) 
+//                             transition: 0.5s ease
+//                             width: 100%
+//                             position: absolute
+//                             bottom: 0
+//                             background: purple
+//                             display: flex
+//                             justify-content: space-between
+//                             @include media(540)
+//                                 display: none
+//                             a
+//                                 width: 50%
+//                                 color: $white
+//                                 padding: 10px
+//                                 &:first-child
+//                                     background: var(--secondary)
+//                                 &:last-child
+//                                     background: #1DA9E1
+
+//             .tabs
+//                 .swiper-nav
+//                     display: flex
+//                     align-items: center
+//                     justify-content: space-between
+//                     width: 104%
+//                     position: absolute
+//                     top: 50%
+//                     left: -2%
+//                     translate: 0% -50%
+//                     z-index: 2
+//                     @include media(540)
+//                         display: none
+//                     button
+//                         width: 45px
+//                         height: 45px
+//                         background-color: $white
+//                         border-radius: 50%
+//                         box-shadow: 0px 5px 15px 0 #00000059
+//                         &.swiper-prev
+//                             &:hover
+//                                 svg
+//                                     translate: -5px 0
+//                         &.swiper-next
+//                             &:hover
+//                                 svg
+//                                     translate: 5px 0
+//                         svg
+//                             transition: .3s ease
+//                             vertical-align: middle
+//                             path 
+//                                 fill: $black
+//     .more-product-btn
+//         width: 180px
+//         margin: auto
+//         .animate-button
+//             padding: 7px 0
+//             @include media(540)
+//                 padding: 3px 0
+//         &:hover a
+//             color: $white
+//         a
+//             padding: 7px 21px
+//             color: $black
+.home-secD
+    background: #fff
+    position: relative
+    overflow: hidden
+    .D-banner
+        position: relative
+        .bg-process
+            height: 100vh
+            position: relative
+            @include media(991)
+                height: 60vh
+            @include media(540)
+                height: 70vh
+                
+            &::before
+                content: ''
+                position: absolute
+                width: 100%
+                height: 100%
+                background: url('../../images/home/order-process-bg.jpg') no-repeat center
+                
+        .banner-wrapper
+            position: absolute
+            left: 50%
+            top: 50%
+            width: 100%
+            transform: translate(-50%, -50%)
+            translate: none
+            .container
+                @include media(540)
+                    padding: 0
+            .flex
+                display: flex
+                align-items: center
+                @include media(991)
+                    display: block
+                .flex-item:first-child
+                    width: 40%
+                    @include media(991)
+                        width: 100%
+                    @include media(540)
+                        display: none
+                    .left-image
+                        width: 100%
+                        @include media(991)
+                            width: 30%
+                            margin: auto
+                .flex-item:last-child
+                    width: 40%
+                    @include media(991)
+                        width: 100%
+                    .heading h2
+                        font-family: Poppins
+                        font-weight: 600
+                        font-size: 36px
+                        line-height: 48px
+                        color: #fff
+                        text-align: left
+                        @include media(991)
+                            text-align: center
+                        @include media(540)
+                            font-size: 26px
+                            line-height: 1
+                    .content
+                        margin: 20px 0 40px 0
+                        display: flex
+                        align-items: center
+                        gap: 60px
+                        @include media(991)
+                            justify-content: center
+                            gap: 40px
+                            margin: 20px 0
+                        @include media(540)
+                            gap: 0
+                            flex-wrap: wrap
+
+                        .process
+                            width: 90px
+                            height: 143px
+                            border-radius: 50px
+                            @include media(540)
+                                width: 118px
+                            .img-border
+                                border: 1px solid #fff
+                                width: 90px
+                                height: 90px
+                                border-radius: 50px
+                                position: relative
+                                margin: auto
+                                @include media(991)
+                                    width: 70px
+                                    height: 70px
+                                .main-img
+                                    width: 38px
+                                    position: absolute
+                                    top: 55%
+                                    left: 50%
+                                    transform: translate(-50%, -50%)
+                                .bag-img
+                                    width: 60px
+                                .line
+                                    position: absolute
+                                    top: 50%
+                                    right: -75px
+                                    transform: translate(-50%,-50%)
+                                    width: 43px
+                                    border: 1px dashed #FFFFFF
+                                    @include media(540)
+                                        display: none
+
+                            .text
+                                position: relative
+                                p
+                                    font-weight: 600
+                                    font-size: 14px
+                                    line-height: 20px
+                                    text-align: center
+                                    color: $white
+                                    margin-top: 15px
+                                    @include media(991)
+                                        font-weight: normal
+                                        font-size: 12px
+
+                                .max-txt
+                                    position: absolute
+                                    width: 140px
+                                    left: -25px
+                                    @include media(540)
+                                        left: -21px
+
+                    .btn-div
+                        @include media(991)
+                            text-align: center
+                            margin: auto
+                        .btn
+                            @include media(991)
+                                height: 40px
+                            @include media(540)
+                                height: 31px
+                                padding: 0px 30px
+
+
+
+.pin-line
+    position: relative
+    background-color: $white
+    height: 20px
+    &::before
+        content: ''
+        position: absolute
+        z-index: 1
+        left: 0
+        top: 7px
+        width: 100%
+        height: fit-content
+        border-bottom: 2px dashed var(--secondary)
+    &::after
+        content: ""
+        position: absolute
+        right: 1px
+        top: 0px
+        transform: rotate(1deg)
+        width: 215px
+        height: 76px
+        z-index: 1
+        background: url('../../images/home/Pin.svg') no-repeat
+        // background: url('../../images/home/order-process-bg.jpg') no-repeat center
+
+        background-position: 100% 100%
+        @include media(540)
+            right: 1px
+            top: -32px
+            width: 110px
+            background-size: contain
