@@ -800,35 +800,39 @@ new Swiper('.client-review-slider', {
 // Clients-Review-slider End
 
 // Story Four Sliders End start
-new Swiper('.story-slider4-slider', {
-    loop: true,
+const sliders = document.querySelectorAll('.story-slider4-slider');
+
+sliders.forEach((slider) => {
+  new Swiper(slider, {
     navigation: {
-        prevEl: '.story-slider4-prev',
-        nextEl: '.story-slider4-next',
+      prevEl: slider.parentElement.querySelector('.story-slider4-prev'),
+      nextEl: slider.parentElement.querySelector('.story-slider4-next'),
     },
     breakpoints: {
-        0: {
-            slidesPerView: 1.1,
-            spaceBetween: 10,
-            speed: 500,
-        },
-        540: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            speed: 700,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 50,
-            speed: 700,
-        },
-        991: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            speed: 700,
-        }
+      0: {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+        speed: 500,
+      },
+      540: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        speed: 700,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+        speed: 700,
+      },
+      991: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        speed: 700,
+      }
     }
+  });
 });
+
 // Story Four Sliders End
 
 new Swiper('.glimpses-swiper', {
@@ -917,8 +921,8 @@ $(document).ready(function () {
                 updateButtons();
             }
         });
-
         updateButtons(); // Initial check on page load
+        
         Fancybox.bind("[data-fancybox]", {
             autoStart: false,
             contentClick: "iterateZoom",

@@ -321,7 +321,7 @@
                                     line-height: 18px
                                     color: $text
 
-.home-secD
+.story-secD
     // border-bottom: 2px dashed var(--secondary)
     padding: 50px 0
     background: #f1f1f2
@@ -457,8 +457,98 @@
 
                     &:hover
                         color: #f1311b
+
+.story-secE
+    position: relative
+    overflow: hidden
+    .bg-video 
+        top: 0 
+        left: 0
+        width: 100vw
+        height: 55vh
+        object-fit: cover
+        z-index: -1
+        video
+            top: 0 
+            left: 0
+            width: 100vw
+            height: 60vh
+            object-fit: cover
+            z-index: -1
+    
+    @include media(540)
+        padding: 30px 0 50px 0
+        
+    .main-container
+        padding: 50px 0
+        position: absolute
+        top: 0
+        left: 0
+        background: #612f23eb
+        .heading
+            margin-bottom: 40px
+            h2
+                font-family: Poppins
+                font-weight: 600
+                font-size: 48px
+                color: white
+                @include media(540)
+                    font-size: 30px
+        .content
+            .content-grid
+                display: grid
+                grid-template-columns: repeat(5, 1fr)
+                margin: 30px 80px 190px 80px
+                @include media(540)
+                    grid-template-columns: repeat(2, 1fr)
+                    gap: 40px
+                @include media(540)
+                    .content-grid-item:last-child
+                        grid-column: 1 / -1
+                        justify-self: center
+                        max-width: 70%
+                .content-grid-item
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    text-align: center
+                    padding: 40px
+                    gap: 15px
+                    &:not(:last-child)
+                        .text p
+                            max-width: 80%
+                            margin: auto
+                    @include media(991)
+                        padding: 40px 10px
+                    @include media(540)
+                        padding: 0
+                    h3
+                        font-family: Poppins
+                        font-weight: 600
+                        font-size: 30px
+                        text-align: center
+
+                    .text p
+                        font-family: Poppins
+                        font-weight: 500
+                        font-size: 16px
+                        line-height: 20px
+                        color: $white
+                        text-align: center   
                         
-.home-secE
+                        
+
+                        @include media(991)
+                            font-size: 14px
+                            line-height: 1.3
+                            font-weight: 400    
+                        @include media(540)
+                            font-size: 14px
+                            line-height: 1.3
+                            font-weight: 400
+                        
+.story-secF
     padding: 50px 0
     position: relative
     overflow: hidden
@@ -478,7 +568,7 @@
             color: var(--primary)
             margin-bottom: 10px
         p
-            max-width: 80%
+            max-width: 70%
             margin: auto
     .story-slider4-part
         padding: 50px 0 
@@ -518,7 +608,7 @@
                         fill: $black
         .story-slider4-slider
             .swiper-slide
-                height: 416px
+                height: 426px
                 text-align: center
                 background: #F3EFEF
                 position: relative
@@ -534,11 +624,11 @@
                 background-color: #1DA9E1
                 height: 155px
             .upper-sec .name
-                position: absolute
-                top: 65%
-                left: 50%
-                transform: translate(-50%, -50%)
-                width: 100%
+                // position: absolute
+                // top: 65%
+                // left: 50%
+                // transform: translate(-50%, -50%)
+                // width: 100%
                 p
                     font-family: Poppins
                     font-weight: 600
@@ -552,432 +642,576 @@
                 width: 145px
                 height: 145px
                 position: absolute
-                top: 38%
+                top: 35%
                 left: 50%
                 transform: translate(-50%, -50%)
                 img
                     border-radius: 50%
-            .icon
-                width: 65px
-                height: 65px
-                position: absolute
-                top: 35%
-                left: 84%
-                transform: translate(-50%, -50%)
-                display: none
-            .middle-sec
-                position: absolute
-                top: 70%
-                left: 50%
-                transform: translate(-50%, -50%)
-                width: 100%
-                text-align: center
-                // .social-icon
-
             .bottom-sec
-                position: absolute
-                top: 90%
-                left: 50%
-                transform: translate(-50%, -50%)
-                width: 100%
-                text-align: center
-                display: flex
-                justify-content:    center
-                align-items: center
-                padding: 0 40px
-                color: $text
+                margin-top: 90px
+                .name
+                    margin-bottom: 20px
+                    p
+                        font-family: Poppins
+                        font-weight: 600
+                        font-size: 18px
+                        line-height: 24px
+                        color: $black
+                        width: 100%
+                        margin-bottom: 2px
+                    p:last-child
+                        font-size: 16px
+                        color: #666666
+                .social-icon
+                    margin-bottom: 15px
+                    display: flex
+                    justify-content: center
+                    gap: 10px
+                    align-items: center
                 a
                     color: #EA4A38
                     cursor: pointer
                     font-family: Poppins
                     font-weight: 600
                     font-size: 16px
-                    line-height: 24px
-
+                    line-height: 1
                     &:hover
                         color: #f1311b
-                        
 
-
-
-// .home-secC
-//     padding-bottom: 20px
-//     border-bottom: 2px dashed var(--secondary)
-//     &.banner
-//         &::before
-//             display: none
-//     .bg
-//         @include before()
-//         &::before
-//             background: linear-gradient(358deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)
-//         .banner-wrapper
-//             left: 50%
-//             translate: -50% -50%
-//             max-width: 540px
-//             .content
-//                 text-align: center
-//                 .icon
-//                     img
-//                         width: 50px
-//                     p
-//                         font-size: 20px
-//                         line-height: 1.2
-//                         letter-spacing: 8px
-//                         text-transform: uppercase
-//                         font-weight: 400
-//                         color: $white
-//                         padding: 20px 0 20px
-//                 .heading
-//                     img
-//                         width: 380px
-//                     p
-//                         color: $white
-//                         padding: 15px 0 40px
-//                         font-weight: 400
-//                         font-size: 15px
-//                         line-height: 1.5
-
-// Worked on adaayein eCommerce website currected all the bugs and made it responsive . Also, made the website more user-friendly and visually appealing. I also made the website more accessible for users with disabilities. I also made the website mor
-
-
-// .home-secC
-//     padding:50px 0
-//     background: #fff
-//     position: relative
-//     overflow: hidden
-//     @include media(540)
-//         padding: 30px 0 50px 0
-//     .heading-img
-//         width: 80px
-//         margin: auto
-//         @include media(540)
-//             width: 50px
-//         img
-//             animation: wiggle 2s ease-in-out infinite
-//             transform-origin: center
-//     .heading
-//         h2
-//             font-family: Poppins
-//             font-weight: 600
-//             font-size: 36px
-//             color: var(--primary)
-//             @include media(540)
-//                 font-size: 26px
-//                 max-width: 80%
-//                 margin: auto
-//     .best_sellers_wrapper
-//         padding: 30px 0 50px
-//         @include media(540)
-//             padding: 30px 0 30px
-//         .bestseller_nav
-//             padding-bottom: 50px
-//             ul
-//                 display: flex
-//                 align-items: center
-//                 justify-content: start
-//                 gap: 30px
-//                 @include media(540)
-//                     overflow-x: auto
-//                     gap: 30px
-//                 li
-//                     position: relative
-//                     color: $text
-//                     padding-bottom: 5px
-//                     transition: .5s ease
-//                     min-width: fit-content
-//                     &.active
-//                         font-weight: 500
-//                         color: var(--primary)
-//                         @include media(540)
-//                             font-size: 14px
-//                         &::before
-//                             width: 100%
-//                     &::before
-//                         content: ""
-//                         position: absolute
-//                         left: 0
-//                         bottom: 0
-//                         width: 0%
-//                         height: 2px
-//                         background-color: var(--primary)
-//                         transition: .5s ease
-                        
-//         .bestseller_nav_content
-//             .bestseller_slider
-//                 .item
-//                     background: #F3F3F3
-//                     overflow: hidden
-//                     border-radius: 15px
-//                     text-align: center
-//                     .product-col
-//                         width: 100%
-//                         height: 342px
-//                         position: relative
-//                         &:hover
-//                             .product-btn
-//                                 transform: translateY(0%) 
-//                         .wishlist
-//                             width: 22px
-//                             position: absolute
-//                             top: 18px
-//                             right: 15px
-//                             .svg
-//                                 transform: scale(1)
-//                                 cursor: pointer
-//                                 // &:hover
-//                                 //     fill: var(--primary)
-//                         .product-img
-//                             width: 100%
-//                             padding: 50px
-//                             height: 270px
-//                             display: flex
-//                             justify-content: center
-//                             align-items: center
-//                             width: 100%
-//                             padding: 50px
-//                             padding: 40px 50px
-//                             overflow: hidden
-//                             &:hover
-//                                 .product-btn
-//                                     transform: translateY(0%)
-//                             img
-//                                 &:hover
-//                                     .product-btn
-//                                         transform: translateY(0%)
-//                         figcaption
-//                             width: 100%
-//                             background-color: #F3F3F3
-//                             position: absolute
-//                             bottom: 0
-//                             .price_wrapper
-//                                 justify-content: center
-//                             h6
-//                                 font-size: 16px
-//                                 line-height: 1.5
-//                                 font-weight: 500
-//                                 color: $black 
-//                                 padding-bottom: 5px
-//                             .flex
-//                                 align-items: center
-//                                 gap: 10px
-//                                 color: $text
-//                                 font-size: 14px
-//                                 padding-bottom: 5px
-//                                 .quant
-//                                     border-right: 1px solid $text
-//                                     padding-right: 10px
-//                             .price
-//                                 font-size: 18px
-//                                 line-height: 1.5
-//                                 font-weight: 500
-//                                 color: $black
-//                         .product-btn
-//                             transform: translateY(100%) 
-//                             transition: 0.5s ease
-//                             width: 100%
-//                             position: absolute
-//                             bottom: 0
-//                             background: purple
-//                             display: flex
-//                             justify-content: space-between
-//                             @include media(540)
-//                                 display: none
-//                             a
-//                                 width: 50%
-//                                 color: $white
-//                                 padding: 10px
-//                                 &:first-child
-//                                     background: var(--secondary)
-//                                 &:last-child
-//                                     background: #1DA9E1
-
-//             .tabs
-//                 .swiper-nav
-//                     display: flex
-//                     align-items: center
-//                     justify-content: space-between
-//                     width: 104%
-//                     position: absolute
-//                     top: 50%
-//                     left: -2%
-//                     translate: 0% -50%
-//                     z-index: 2
-//                     @include media(540)
-//                         display: none
-//                     button
-//                         width: 45px
-//                         height: 45px
-//                         background-color: $white
-//                         border-radius: 50%
-//                         box-shadow: 0px 5px 15px 0 #00000059
-//                         &.swiper-prev
-//                             &:hover
-//                                 svg
-//                                     translate: -5px 0
-//                         &.swiper-next
-//                             &:hover
-//                                 svg
-//                                     translate: 5px 0
-//                         svg
-//                             transition: .3s ease
-//                             vertical-align: middle
-//                             path 
-//                                 fill: $black
-//     .more-product-btn
-//         width: 180px
-//         margin: auto
-//         .animate-button
-//             padding: 7px 0
-//             @include media(540)
-//                 padding: 3px 0
-//         &:hover a
-//             color: $white
-//         a
-//             padding: 7px 21px
-//             color: $black
-.home-secD
-    background: #fff
+.story-secG
+    padding: 50px 0
     position: relative
     overflow: hidden
-    .D-banner
+    background: #F7EDEA
+    @include media(540)
+        padding: 40px 0
+    .heading-img
+        width: 80px
+        margin: auto
+        @include media(540)
+            width: 50px
+        img
+            animation: wiggle 2s ease-in-out infinite
+            transform-origin: center
+    .heading
+        margin-top: 10px
+        h2
+            color: var(--primary)
+            margin-bottom: 10px
+        p
+            max-width: 70%
+            margin: auto
+    .story-slider4-part
+        padding: 50px 0 
         position: relative
-        .bg-process
-            height: 100vh
-            position: relative
-            @include media(991)
-                height: 60vh
-            @include media(540)
-                height: 70vh
-                
-            &::before
-                content: ''
-                position: absolute
-                width: 100%
-                height: 100%
-                background: url('../../images/home/order-process-bg.jpg') no-repeat center
-                
-        .banner-wrapper
+        @include media(540)
+        padding: 40px 0
+        .swiper-nav
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 104%
             position: absolute
-            left: 50%
             top: 50%
-            width: 100%
-            transform: translate(-50%, -50%)
-            translate: none
-            .container
-                @include media(540)
-                    padding: 0
-            .flex
-                display: flex
-                align-items: center
-                @include media(991)
-                    display: block
-                .flex-item:first-child
-                    width: 40%
-                    @include media(991)
-                        width: 100%
-                    @include media(540)
-                        display: none
-                    .left-image
-                        width: 100%
-                        @include media(991)
-                            width: 30%
-                            margin: auto
-                .flex-item:last-child
-                    width: 40%
-                    @include media(991)
-                        width: 100%
-                    .heading h2
+            left: -2%
+            translate: 0% -50%
+            z-index: 2
+            @include media(540)
+                display: none
+            button
+                width: 45px
+                height: 45px
+                background-color: $white
+                border-radius: 50%
+                box-shadow: 0px 5px 15px 0 #00000059
+                &.swiper-prev
+                    &:hover
+                        svg
+                            translate: -5px 0
+                &.swiper-next
+                    &:hover
+                        svg
+                            translate: 5px 0
+                svg
+                    transition: .3s ease
+                    vertical-align: middle
+                    path 
+                        fill: $black
+        .story-slider4-slider
+            .swiper-slide
+                height: 446px
+                text-align: center
+                background: #fff
+                position: relative
+                overflow: hidden
+                border-radius: 5px
+            .swiper-slide:nth-child(3n+1) .upper-sec 
+                background-color: #C33A15
+                height: 155px
+            .swiper-slide:nth-child(3n+2) .upper-sec
+                background-color: #C33A15
+                height: 155px
+            .swiper-slide:nth-child(3n) .upper-sec
+                background-color: #C33A15
+                height: 155px
+            .upper-sec .name
+                p
+                    font-family: Poppins
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 24px
+                    color: $black
+                    width: 100%
+                p:last-child
+                    color: #666666
+            .image 
+                width: 145px
+                height: 145px
+                position: absolute
+                top: 33%
+                left: 50%
+                transform: translate(-50%, -50%)
+                img
+                    border-radius: 50%
+            .bottom-sec
+                max-width: 80%
+                margin: auto
+                padding-top: 90px
+                .name
+                    margin-bottom: 20px
+                    p
                         font-family: Poppins
                         font-weight: 600
-                        font-size: 36px
-                        line-height: 48px
-                        color: #fff
-                        text-align: left
-                        @include media(991)
-                            text-align: center
-                        @include media(540)
-                            font-size: 26px
-                            line-height: 1
-                    .content
-                        margin: 20px 0 40px 0
+                        font-size: 18px
+                        line-height: 24px
+                        color: $black
+                        width: 100%
+                        margin-bottom: 5px
+                    p:last-child
+                        font-size: 16px
+                        color: #666666
+                .social-icon
+                    margin-bottom: 15px
+                    display: flex
+                    justify-content: center
+                    gap: 10px
+                    align-items: center
+                a
+                    color: #EA4A38
+                    cursor: pointer
+                    font-family: Poppins
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 1
+                    &:hover
+                        color: #f1311b
+
+.story-secH
+    padding: 50px 0
+    position: relative
+    overflow: hidden
+    @include media(540)
+        padding: 40px 0
+    .heading-img
+        width: 80px
+        margin: auto
+        @include media(540)
+            width: 50px
+        img
+            animation: wiggle 2s ease-in-out infinite
+            transform-origin: center
+    .heading
+        margin-top: 10px
+        h2
+            color: var(--primary)
+            margin-bottom: 10px
+        p
+            max-width:70%
+            margin: auto
+    .story-slider4-part
+        padding: 50px 0 
+        position: relative
+        @include media(540)
+        padding: 40px 0
+        .swiper-nav
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 104%
+            position: absolute
+            top: 50%
+            left: -2%
+            translate: 0% -50%
+            z-index: 2
+            @include media(540)
+                display: none
+            button
+                width: 45px
+                height: 45px
+                background-color: $white
+                border-radius: 50%
+                box-shadow: 0px 5px 15px 0 #00000059
+                &.swiper-prev
+                    &:hover
+                        svg
+                            translate: -5px 0
+                &.swiper-next
+                    &:hover
+                        svg
+                            translate: 5px 0
+                svg
+                    transition: .3s ease
+                    vertical-align: middle
+                    path 
+                        fill: $black
+        .story-slider4-slider
+            .swiper-slide
+                height: 476px
+                text-align: center
+                background: #F1F1F2
+                position: relative
+                overflow: hidden
+                border-radius: 5px
+            .swiper-slide:nth-child(3n+1) .upper-sec 
+                background-color: #028034
+                height: 155px
+            .swiper-slide:nth-child(3n+2) .upper-sec
+                background-color: #028034
+                height: 155px
+            .swiper-slide:nth-child(3n) .upper-sec
+                background-color: #028034
+                height: 155px
+            .upper-sec .name
+                p
+                    font-family: Poppins
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 24px
+                    color: $black
+                    width: 100%
+                    margin-bottom: 90px
+                p:last-child
+                    color: #666666
+            .image 
+                width: 145px
+                height: 145px
+                position: absolute
+                top: 31%
+                left: 50%
+                transform: translate(-50%, -50%)
+                img
+                    border-radius: 50%
+            .bottom-sec
+                max-width: 80%
+                margin: auto
+                padding-top: 90px
+                .name
+                    margin-bottom: 20px
+                    p
+                        font-family: Poppins
+                        font-weight: 600
+                        font-size: 18px
+                        line-height: 24px
+                        color: $black
+                        width: 100%
+                        margin-bottom: 5px
+                    p:last-child
+                        font-size: 16px
+                        color: #666666
+                        line-height: 1.3
+                .social-icon
+                    margin-bottom: 15px
+                    display: flex
+                    justify-content: center
+                    gap: 10px
+                    align-items: center
+                a
+                    color: #EA4A38
+                    cursor: pointer
+                    font-family: Poppins
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 1
+                    &:hover
+                        color: #f1311b
+
+.story-secI
+    background: #CCF1FF
+    overflow: hidden
+    padding: 50px 0
+    .heading-img
+        width: 80px
+        margin: auto
+        @include media(540)
+            width: 50px
+        img
+            animation: wiggle 2s ease-in-out infinite
+            transform-origin: center
+    .heading
+        @include media(540)
+            margin-top: 0
+        h2
+            color: var(--primary)
+    p
+        font-family: Poppins
+        font-weight: 400
+        font-size: 16px
+        margin: 20px 0
+        color: $text
+    .flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 50px 0 0px 0
+        @include media(991)
+            display: block
+        .flex-item
+            .figure
+                width: 448px
+                height: 316px
+                img
+                    border-radius: 10px
+
+        .flex-item:first-child
+            border-radius: 15px
+            overflow: hidden
+            width: 40% 
+            @include media(991)
+                margin-bottom: 30px 
+        .flex-item:last-child
+            width: 60%  
+            
+    .story-slider4-part
+        padding: 50px 0 
+        position: relative
+        @include media(540)
+        padding: 40px 0
+        .swiper-nav
+            @include media(540)
+                display: none
+            button
+                width: 45px
+                height: 45px
+                background-color: $white
+                border-radius: 50%
+                box-shadow: 0px 5px 15px 0 #00000059
+                &.swiper-prev
+                    position: relative
+                    top: 124px
+                    z-index: 2
+                    left: -22px
+                    &:hover
+                        svg
+                            translate: -5px 0
+                &.swiper-next
+                    position: relative
+                    z-index: 2
+                    right: -94%
+                    top: 120px
+                    &:hover
+                        svg
+                            translate: 5px 0
+                svg
+                    transition: .3s ease
+                    vertical-align: middle
+                    path 
+                        fill: $black
+        .story-slider4-slider
+            .swiper-slide
+                .figure
+                    height: 200px
+                    overflow: hidden
+                    border-radius: 5px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        cursor: pointer
+
+.story-secJ
+    overflow: hidden
+    padding: 50px 0
+    .heading-img
+        width: 80px
+        margin: auto
+        @include media(540)
+            width: 50px
+        img
+            animation: wiggle 2s ease-in-out infinite
+            transform-origin: center
+    .heading
+        @include media(540)
+            margin-top: 0
+        h2
+            color: var(--primary)
+    .tab-section
+        .tab-nav
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 50px
+            padding: 20px 0
+            li
+                position: relative
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    width: 0%
+                    height: 2px
+                    background-color: var(--secondary)
+                    transition: 0.5s ease
+            .active
+                transition: 0.5s ease
+                color: var(--secondary)
+            li.active::before
+                width: 100%
+        .tab-nav-content
+            .tabs
+                opacity: 0
+                transition: 0.5s ease-in-out
+            .active
+                opacity: 1
+            .flex-box
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 20px 0 50px 0
+                gap: 50px
+                .flex-box-item:first-child
+                    .figure
+                        width: 446px
+                        height: 242px
+                        border-radius: 10px
+                        border: 1px solid #B5B5B5
                         display: flex
+                        justify-content: center
                         align-items: center
-                        gap: 60px
-                        @include media(991)
-                            justify-content: center
-                            gap: 40px
-                            margin: 20px 0
-                        @include media(540)
-                            gap: 0
-                            flex-wrap: wrap
+                        padding: 30px
+                .flex-box-item:last-child
+                    max-width: 40%
+                    p
+                        color: #666666
+                        margin-bottom: 20px
 
-                        .process
-                            width: 90px
-                            height: 143px
-                            border-radius: 50px
-                            @include media(540)
-                                width: 118px
-                            .img-border
-                                border: 1px solid #fff
-                                width: 90px
-                                height: 90px
-                                border-radius: 50px
-                                position: relative
-                                margin: auto
-                                @include media(991)
-                                    width: 70px
-                                    height: 70px
-                                .main-img
-                                    width: 38px
-                                    position: absolute
-                                    top: 55%
-                                    left: 50%
-                                    transform: translate(-50%, -50%)
-                                .bag-img
-                                    width: 60px
-                                .line
-                                    position: absolute
-                                    top: 50%
-                                    right: -75px
-                                    transform: translate(-50%,-50%)
-                                    width: 43px
-                                    border: 1px dashed #FFFFFF
-                                    @include media(540)
-                                        display: none
-
-                            .text
-                                position: relative
-                                p
-                                    font-weight: 600
-                                    font-size: 14px
-                                    line-height: 20px
-                                    text-align: center
-                                    color: $white
-                                    margin-top: 15px
-                                    @include media(991)
-                                        font-weight: normal
-                                        font-size: 12px
-
-                                .max-txt
-                                    position: absolute
-                                    width: 140px
-                                    left: -25px
-                                    @include media(540)
-                                        left: -21px
-
-                    .btn-div
-                        @include media(991)
-                            text-align: center
-                            margin: auto
-                        .btn
-                            @include media(991)
-                                height: 40px
-                            @include media(540)
-                                height: 31px
-                                padding: 0px 30px
+.story-secK
+    overflow: hidden
+    padding: 50px 0
+    .flex
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 70px
+        @include media(991)
+            display: block
+        .flex-item
+            width: 48%  
+            @include media(991)
+                width: 100%
+        .flex-item:first-child
+            width: 533px
+            height: 464px
+            border-radius: 10px
+            overflow: hidden
+            @include media(991)
+                margin-bottom: 30px 
+        .flex-item:last-child
+            .heading
+                @include media(540)
+                    margin-top: 0
+                h2
+                    color: var(--primary)
+                    text-align: left
+                p
+                    font-family: Poppins
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 24px
+                    color: #000000
+                    text-align: left
+                    margin-bottom: 10px
+            .content
+                p:first-child
+                    font-family: Poppins
+                    font-weight: 400
+                    font-size: 16px
+                    margin: 0px 0 20px 0
+                    color: $text
+                p:last-child
+                    color: $text
+                    margin: 0px 0 30px 0
+            a
+                border-radius: 25px
+                padding: 8px 21px
+                color: white
+                background: #EA4A38
+                margin: 20px 0 0 0
 
 
-
+.story-secL
+    overflow: hidden
+    padding: 50px 0
+    .heading-img
+        width: 80px
+        margin: auto
+        @include media(540)
+            width: 50px
+        img
+            animation: wiggle 2s ease-in-out infinite
+            transform-origin: center
+    .heading
+        @include media(540)
+            margin-top: 0
+        h2
+            color: var(--primary)
+    .story-slider4-part
+        padding: 0 0 50px 0 
+        position: relative
+        @include media(540)
+            padding: 40px 0
+        .swiper-nav
+            @include media(540)
+                display: none
+            button
+                width: 45px
+                height: 45px
+                background-color: $white
+                border-radius: 50%
+                box-shadow: 0px 5px 15px 0 #00000059
+                &.swiper-prev
+                    position: relative
+                    top: 154px
+                    z-index: 2
+                    left: -22px
+                    &:hover
+                        svg
+                            translate: -5px 0
+                &.swiper-next
+                    position: relative
+                    z-index: 2
+                    right: -94%
+                    top: 154px
+                    &:hover
+                        svg
+                            translate: 5px 0
+                svg
+                    transition: .3s ease
+                    vertical-align: middle
+                    path 
+                        fill: $black
+        .story-slider4-slider
+            .swiper-slide
+                .figure
+                    height: 262px
+                    overflow: hidden
+                    border-radius: 5px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        cursor: pointer
+   
 .pin-line
     position: relative
     background-color: $white
