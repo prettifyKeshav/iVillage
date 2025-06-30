@@ -1,87 +1,252 @@
 @import '../_var'
 
-.contact-banner
-    padding: 95px 0 70px
-    @include media(991)
-        padding: 80px 0 70px
-    @include media(768)
-        padding: 60px 0 50px
-    @include media(540)
-        padding: 50px 0 40px
-    .content
-        h1
-            color: #000
-            letter-spacing: 4px
+.banner 
+    &.home-banner 
+        background: #fff
+        &::before
+            display: none
+        .bg 
+            margin-top: 140px
+            position: relative
+            background-color: #FFE8DD
+            height: 80vh
+            @include media(991)
+                height: 50vh
+            @include media(540)
+                height: 50vh
+            &::before
+                content: ""
+                position: absolute
+                width: 100%
+                height: 100%
+                right: 0
+                top: 0
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 17.86%, rgba(0, 0, 0, 0.75) 83.52%)
+        .banner-wrapper
+            left: 50%
+            top: 86%
+            transform: translate(-50%, -50%)
+            @include media(768)
+                width: 400px
+            @include media(540)
+                width: 300px
+            .container
+                .content
+                    h1
+                        font-size: 80px
+                        font-family: Poppins
+                        font-weight: 700
+                        font-size: 48px
+                        line-height: 48px
+                        text-align: center
+                        margin-bottom: 10px
+                        @include media(1024)
+                            font-size: 70px
+                        @include media(991)  
+                            font-size: 65px
+                        @include media(768)
+                            font-size: 50px
+                        @include media(540)
+                            font-size: 33px
+                            line-height: 1.1
+                    p
+                        color: $white
+                        font-family: Poppins
+                        font-weight: 500
+                        font-size: 20px
+                        line-height: 100%
+                        letter-spacing: 0%
+                        text-align: center
 
-.contact-secA
-    padding-bottom: 67px
-    @include media(991)
-        padding-bottom: 50px
-    @include media(768)
-        padding-bottom: 30px
-    @include media(540)
-        padding-bottom: 0
-    .flex
-        gap: 24px
-        @include media(768)
-            flex-direction: column  
-            gap: 20px
-    .col-md
-        flex: 1
-        padding: 44px 32px 55px
-        @include flex
-        .inf
-            flex: 1
-            padding-left: 30px
-            h6
-                font-size: 20px
-                line-height: 24px
-                color: $primary
-                margin-bottom: 9px
-            a
-                display: block
-                color: $text
-                &:not(:last-of-type)
-                    margin-bottom: 12px
-                &:hover
-                    color: $primary
-
-.contact-secC
-    padding: 67px 0 170px
-    @include media(991)
-        padding: 55px 0 130px
-    @include media(768)
-        padding: 40px 0 100px
-    @include media(540)
-        padding: 50px 0
+        .pin-img
+            position: absolute
+            right: 0
+            z-index: 5
+            overflow: hidden
+            @include media(540)
+                width: 110px
+                top: 301.4px
+            img
+                transform: rotate(0.8deg)
     .heading
-        max-width: 415px
-        margin-left: auto
-        margin-right: auto
-        margin-bottom: 54px
-        h3
-            color: $black
-            letter-spacing: 5px
-        .ico
-            width: 70px
-            line-height: 0
-            margin-bottom: 38px
-            margin-left: auto
-            margin-right: auto
-            svg
-                path 
-                    fill: #000
-    .form-wrap
-        max-width: 622px
-        margin-left: auto
-        margin-right: auto
-        .form
-            --item: 2
-            --borderbefore: var(--text)
-            --borderafter: var(--black)
-            --gaptb: 17px
-            --gaplr: 17px
-            .sbmt-grp
-                margin-top: 35px
-                .btn
-                    --padding: 50px
+        .swiper-nav
+            position: absolute
+            right: 0
+            top: 20%
+            display: flex
+            align-items: center
+            width: max-content
+            button
+                flex: 0 1 auto
+                width: 45px
+                height: 45px
+                border: 2px solid var(--primary)
+                border-radius: 50%
+                svg
+                    vertical-align: middle
+                    path 
+                        fill: var(--primary)
+                        stroke-width: 5px
+                
+.contact-secA
+    padding: 50px 0
+    position: relative
+    overflow: hidden
+    @include media(540)
+        padding: 40px 0
+    .heading-img
+        width: 80px
+        margin: auto
+        @include media(540)
+            width: 50px
+        img
+            animation: wiggle 2s ease-in-out infinite
+            transform-origin: center
+    .heading
+        margin-top: 10px
+        h2
+            color: var(--primary)
+            margin-bottom: 10px
+        p
+            max-width: 70%
+            margin: auto
+    .story-slider4-part
+        padding: 50px 0 
+        position: relative
+        @include media(540)
+        padding: 40px 0
+        .swiper-nav
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 104%
+            position: absolute
+            top: 50%
+            left: -2%
+            translate: 0% -50%
+            z-index: 2
+            @include media(540)
+                display: none
+            button
+                width: 45px
+                height: 45px
+                background-color: $white
+                border-radius: 50%
+                box-shadow: 0px 5px 15px 0 #00000059
+                &.swiper-prev
+                    &:hover
+                        svg
+                            translate: -5px 0
+                &.swiper-next
+                    &:hover
+                        svg
+                            translate: 5px 0
+                svg
+                    transition: .3s ease
+                    vertical-align: middle
+                    path 
+                        fill: $black
+        .story-slider4-slider
+            .swiper-slide
+                height: 426px
+                text-align: center
+                background: #F3EFEF
+                position: relative
+                overflow: hidden
+                border-radius: 5px
+            .swiper-slide:nth-child(3n+1) .upper-sec 
+                background-color: #1DA9E1
+                height: 155px
+            .swiper-slide:nth-child(3n+2) .upper-sec
+                background-color: #1DA9E1
+                height: 155px
+            .swiper-slide:nth-child(3n) .upper-sec
+                background-color: #1DA9E1
+                height: 155px
+            .upper-sec .name
+                // position: absolute
+                // top: 65%
+                // left: 50%
+                // transform: translate(-50%, -50%)
+                // width: 100%
+                p
+                    font-family: Poppins
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 24px
+                    color: $black
+                    width: 100%
+                p:last-child
+                    color: #666666
+            .image 
+                width: 145px
+                height: 145px
+                position: absolute
+                top: 35%
+                left: 50%
+                transform: translate(-50%, -50%)
+                img
+                    border-radius: 50%
+            .bottom-sec
+                margin-top: 90px
+                .name
+                    margin-bottom: 20px
+                    p
+                        font-family: Poppins
+                        font-weight: 600
+                        font-size: 18px
+                        line-height: 24px
+                        color: $black
+                        width: 100%
+                        margin-bottom: 2px
+                    p:last-child
+                        font-size: 16px
+                        color: #666666
+                .social-icon
+                    margin-bottom: 15px
+                    display: flex
+                    justify-content: center
+                    gap: 10px
+                    align-items: center
+                a
+                    color: #EA4A38
+                    cursor: pointer
+                    font-family: Poppins
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 1
+                    &:hover
+                        color: #f1311b
+
+
+
+.pin-line
+    position: relative
+    background-color: $white
+    height: 20px
+    &::before
+        content: ''
+        position: absolute
+        z-index: 1
+        left: 0
+        top: 7px
+        width: 100%
+        height: fit-content
+        border-bottom: 2px dashed var(--secondary)
+    &::after
+        content: ""
+        position: absolute
+        right: 1px
+        top: 0px
+        transform: rotate(1deg)
+        width: 215px
+        height: 76px
+        z-index: 1
+        background: url('../../images/home/Pin.svg') no-repeat
+        // background: url('../../images/home/order-process-bg.jpg') no-repeat center
+        background-position: 100% 100%
+        @include media(540)
+            right: 1px
+            top: -32px
+            width: 110px
+            background-size: contain
