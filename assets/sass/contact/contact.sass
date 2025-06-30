@@ -94,14 +94,6 @@
     overflow: hidden
     @include media(540)
         padding: 40px 0
-    .heading-img
-        width: 80px
-        margin: auto
-        @include media(540)
-            width: 50px
-        img
-            animation: wiggle 2s ease-in-out infinite
-            transform-origin: center
     .heading
         margin-top: 10px
         h2
@@ -110,114 +102,145 @@
         p
             max-width: 70%
             margin: auto
-    .story-slider4-part
-        padding: 50px 0 
-        position: relative
-        @include media(540)
-        padding: 40px 0
-        .swiper-nav
-            display: flex
-            align-items: center
-            justify-content: space-between
-            width: 104%
-            position: absolute
-            top: 50%
-            left: -2%
-            translate: 0% -50%
-            z-index: 2
-            @include media(540)
-                display: none
-            button
-                width: 45px
-                height: 45px
-                background-color: $white
-                border-radius: 50%
-                box-shadow: 0px 5px 15px 0 #00000059
-                &.swiper-prev
-                    &:hover
-                        svg
-                            translate: -5px 0
-                &.swiper-next
-                    &:hover
-                        svg
-                            translate: 5px 0
-                svg
-                    transition: .3s ease
-                    vertical-align: middle
-                    path 
-                        fill: $black
-        .story-slider4-slider
-            .swiper-slide
-                height: 426px
-                text-align: center
-                background: #F3EFEF
-                position: relative
-                overflow: hidden
-                border-radius: 5px
-            .swiper-slide:nth-child(3n+1) .upper-sec 
-                background-color: #1DA9E1
-                height: 155px
-            .swiper-slide:nth-child(3n+2) .upper-sec
-                background-color: #1DA9E1
-                height: 155px
-            .swiper-slide:nth-child(3n) .upper-sec
-                background-color: #1DA9E1
-                height: 155px
-            .upper-sec .name
-                // position: absolute
-                // top: 65%
-                // left: 50%
-                // transform: translate(-50%, -50%)
-                // width: 100%
-                p
-                    font-family: Poppins
-                    font-weight: 600
-                    font-size: 16px
-                    line-height: 24px
-                    color: $black
-                    width: 100%
-                p:last-child
-                    color: #666666
-            .image 
-                width: 145px
-                height: 145px
-                position: absolute
-                top: 35%
-                left: 50%
-                transform: translate(-50%, -50%)
+    .flex-box
+        display: flex
+        justify-content: space-around
+        gap: 40px
+        padding: 50px 0
+        .flex-item
+            width: 40%
+        .flex-item:first-child
+            width: 466px
+            height: 355px
+        .flex-item:last-child
+            h5
+                font-family: Poppins
+                font-weight: 600
+                font-size: 18px
+                line-height: 1
+                color: $black
+                margin-bottom: 30px
+            .flex-box
+                display: flex
+                justify-content: start
+                gap: 30px
+                padding: 0
+                margin-bottom: 25px
                 img
-                    border-radius: 50%
-            .bottom-sec
-                margin-top: 90px
-                .name
-                    margin-bottom: 20px
-                    p
+                    width: 30px
+                    height: 38px
+                    object-fit: contain
+                .info
+                    p:first-child
                         font-family: Poppins
-                        font-weight: 600
-                        font-size: 18px
-                        line-height: 24px
-                        color: $black
-                        width: 100%
-                        margin-bottom: 2px
-                    p:last-child
+                        font-weight: 500
                         font-size: 16px
-                        color: #666666
-                .social-icon
-                    margin-bottom: 15px
-                    display: flex
-                    justify-content: center
-                    gap: 10px
-                    align-items: center
+                        line-height: 24px
+                        color: $primary
+                        margin-bottom: 6px
+                    p
+                        margin-bottom: 15px
+                    a
+                        color: var(--secondary)
+                        display: flex
+                        justify-content: start
+                        align-items: center
+                        gap: 5px
+                        &:hover 
+                            span
+                                padding-left: 10px  
+                        span 
+                            transition: 0.5s ease 
+                            img
+                                height: auto
+            .flex-box:nth-child(4)
+                align-items: center
+                margin-bottom: 15px
+                img
+                    width: 25px
+                    aspect-ratio: 1
+                    object-fit: contain
                 a
-                    color: #EA4A38
-                    cursor: pointer
-                    font-family: Poppins
-                    font-weight: 600
-                    font-size: 16px
-                    line-height: 1
+                    color: $text
                     &:hover
-                        color: #f1311b
+                        color: var(--secondary)
+            .flex-box:nth-child(5)
+                align-items: center               
+                margin-bottom: 5px
+                img
+                    width: 28px
+                    aspect-ratio: 1
+                    object-fit: contain
+                a
+                    color: $text
+                    &:hover
+                        color: var(--secondary)
 
+.contact-secB
+    padding: 50px 0
+    position: relative
+    overflow: hidden
+    background: #F6ECE2
+    @include media(540)
+        padding: 40px 0
+    .heading
+        max-width: 40%
+        margin: auto
+        h2
+            color: var(--primary)
+            margin-bottom: 10px
+    .form-div
+        max-width: 60%
+        margin: auto
+        padding: 50px 0
+        .form-grid 
+            --item: 2
+            @include media(540)
+                --item: 2
+        button
+            width: 105px
+            height: 44px
+            gap: 10px
+            border-radius: 25px
+            padding: 10px 23px
+            background: var(--secondary)
+            color: $white
+            font-weight: 600
+            margin: auto
+.contact-secC
+    overflow: hidden
+    height: auto
+    margin-bottom: -6.9px
+    padding: 50px 0 100px 0  
+    .flex-box
+        display: flex
+        justify-content: space-between
+        .flex-box-item
+            width: 48%
+            overflow: hidden
+            object-fit: cover
+            h5
+                font-family: Poppins
+                font-weight: 600
+                font-size: 24px
+                line-height: 24px
+                color: black
+                margin-bottom: 30px
+
+            iframe
+                border: 1px solid $primary
+                border-radius: 10px
+                height: 434px
+
+
+    iframe
+        width: 100%
+        margin-bottom: 0
+        height: 656px
+        @include media(991)
+            height: 50vh
+        @include media(540)
+            height: 60vh
 
 
 .pin-line
