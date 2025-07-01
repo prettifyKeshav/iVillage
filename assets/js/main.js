@@ -796,7 +796,7 @@ new Swiper('.client-review-slider', {
             speed: 700,
         },
          1024: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 70,
             speed: 700,
         }
@@ -835,7 +835,7 @@ sliders.forEach((slider) => {
         speed: 700,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 20,
         speed: 700,
       }

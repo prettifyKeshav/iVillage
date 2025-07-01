@@ -6,12 +6,14 @@
         &::before
             display: none
         .bg 
-            margin-top: 140px
+            margin-top: var(--headerheight)
             position: relative
             background-color: #FFE8DD
             height: 80vh
+            @include media(1024)
+                height: 60vh
             @include media(991)
-                height: 50vh
+                height: 40vh
             @include media(540)
                 height: 50vh
             &::before
@@ -26,14 +28,15 @@
             left: 50%
             top: 86%
             transform: translate(-50%, -50%)
+            @include media(1024)
+                width: 100%
             @include media(768)
-                width: 400px
+                width: 100%
             @include media(540)
-                width: 300px
+                width: 100%
             .container
                 .content
                     h1
-                        font-size: 80px
                         font-family: Poppins
                         font-weight: 700
                         font-size: 48px
@@ -41,13 +44,12 @@
                         text-align: center
                         margin-bottom: 10px
                         @include media(1024)
-                            font-size: 70px
                         @include media(991)  
-                            font-size: 65px
+                            font-size: 40px
                         @include media(768)
-                            font-size: 50px
+                            font-size: 40px
                         @include media(540)
-                            font-size: 33px
+                            font-size: 30px
                             line-height: 1.1
                     p
                         color: $white
@@ -57,6 +59,11 @@
                         line-height: 100%
                         letter-spacing: 0%
                         text-align: center
+                        @include media(991)
+                            font-size: 18px
+                        @include media(540)
+                            font-size: 16px
+                            line-height: 1.3
 
         .pin-img
             position: absolute
@@ -107,12 +114,27 @@
         justify-content: space-around
         gap: 40px
         padding: 50px 0
+        @include media(768)
+            padding: 50px 0 0 0
+        @include media(540)
+            display: block
         .flex-item
             width: 40%
+            
         .flex-item:first-child
             width: 466px
-            height: 355px
+            @include media(540)
+                width: 100%
+                max-width: 60%
+                margin: auto
+                margin-bottom: 30px
         .flex-item:last-child
+            @include media(1024)
+                width: 60%
+            @include media(991)
+                width: 100%
+            @include media(540)
+                width: 100%
             h5
                 font-family: Poppins
                 font-weight: 600
@@ -120,6 +142,8 @@
                 line-height: 1
                 color: $black
                 margin-bottom: 30px
+                @include media(540)
+                    text-align: center
             .flex-box
                 display: flex
                 justify-content: start
@@ -140,6 +164,8 @@
                         margin-bottom: 6px
                     p
                         margin-bottom: 15px
+                        @include media(768)
+                            font-size: 14px
                     a
                         color: var(--secondary)
                         display: flex
@@ -186,6 +212,12 @@
     .heading
         max-width: 40%
         margin: auto
+        @include media(1024)
+            max-width: 60%
+        @include media(991)
+            max-width: 80%
+        @include media(540)
+            max-width: 100%
         h2
             color: var(--primary)
             margin-bottom: 10px
@@ -193,10 +225,15 @@
         max-width: 60%
         margin: auto
         padding: 50px 0
+        @include media(991)
+            max-width: 90%
+            padding: 50px 0 20px 0
+        @include media(540)
+            padding: 20px 0
         .form-grid 
             --item: 2
             @include media(540)
-                --item: 2
+                --item: 1
         button
             width: 105px
             height: 44px
@@ -212,13 +249,20 @@
     height: auto
     margin-bottom: -6.9px
     padding: 50px 0 100px 0  
+    @include media(540)
+        padding: 50px 0
     .flex-box
         display: flex
         justify-content: space-between
+        @include media(540)
+            display: block
         .flex-box-item
             width: 48%
             overflow: hidden
             object-fit: cover
+            @include media(540)
+                width: 100%
+                margin-bottom: 30px
             h5
                 font-family: Poppins
                 font-weight: 600
@@ -226,11 +270,19 @@
                 line-height: 24px
                 color: black
                 margin-bottom: 30px
+                @include media(1024)
+                    font-size: 20px
+                @include media(991)
+                    font-size: 15px
+                @include media(540)
+                    margin-bottom: 10px
 
             iframe
                 border: 1px solid $primary
                 border-radius: 10px
                 height: 434px
+                @include media(540)
+                    height: 300px
 
 
     iframe

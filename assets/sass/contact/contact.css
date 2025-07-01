@@ -20,14 +20,19 @@
   display: none;
 }
 .banner.home-banner .bg {
-  margin-top: 140px;
+  margin-top: var(--headerheight);
   position: relative;
   background-color: #FFE8DD;
   height: 80vh;
 }
+@media only screen and (max-width: 1024px) {
+  .banner.home-banner .bg {
+    height: 60vh;
+  }
+}
 @media only screen and (max-width: 991px) {
   .banner.home-banner .bg {
-    height: 50vh;
+    height: 40vh;
   }
 }
 @media only screen and (max-width: 540px) {
@@ -49,18 +54,22 @@
   top: 86%;
   transform: translate(-50%, -50%);
 }
+@media only screen and (max-width: 1024px) {
+  .banner.home-banner .banner-wrapper {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 768px) {
   .banner.home-banner .banner-wrapper {
-    width: 400px;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 540px) {
   .banner.home-banner .banner-wrapper {
-    width: 300px;
+    width: 100%;
   }
 }
 .banner.home-banner .banner-wrapper .container .content h1 {
-  font-size: 80px;
   font-family: Poppins;
   font-weight: 700;
   font-size: 48px;
@@ -68,24 +77,19 @@
   text-align: center;
   margin-bottom: 10px;
 }
-@media only screen and (max-width: 1024px) {
-  .banner.home-banner .banner-wrapper .container .content h1 {
-    font-size: 70px;
-  }
-}
 @media only screen and (max-width: 991px) {
   .banner.home-banner .banner-wrapper .container .content h1 {
-    font-size: 65px;
+    font-size: 40px;
   }
 }
 @media only screen and (max-width: 768px) {
   .banner.home-banner .banner-wrapper .container .content h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 @media only screen and (max-width: 540px) {
   .banner.home-banner .banner-wrapper .container .content h1 {
-    font-size: 33px;
+    font-size: 30px;
     line-height: 1.1;
   }
 }
@@ -97,6 +101,17 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+}
+@media only screen and (max-width: 991px) {
+  .banner.home-banner .banner-wrapper .container .content p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .banner.home-banner .banner-wrapper .container .content p {
+    font-size: 16px;
+    line-height: 1.3;
+  }
 }
 .banner.home-banner .pin-img {
   position: absolute;
@@ -164,12 +179,44 @@
   gap: 40px;
   padding: 50px 0;
 }
+@media only screen and (max-width: 768px) {
+  .contact-secA .flex-box {
+    padding: 50px 0 0 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-secA .flex-box {
+    display: block;
+  }
+}
 .contact-secA .flex-box .flex-item {
   width: 40%;
 }
 .contact-secA .flex-box .flex-item:first-child {
   width: 466px;
-  height: 355px;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secA .flex-box .flex-item:first-child {
+    width: 100%;
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .contact-secA .flex-box .flex-item:last-child {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .contact-secA .flex-box .flex-item:last-child {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-secA .flex-box .flex-item:last-child {
+    width: 100%;
+  }
 }
 .contact-secA .flex-box .flex-item:last-child h5 {
   font-family: Poppins;
@@ -178,6 +225,11 @@
   line-height: 1;
   color: var(--black);
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secA .flex-box .flex-item:last-child h5 {
+    text-align: center;
+  }
 }
 .contact-secA .flex-box .flex-item:last-child .flex-box {
   display: flex;
@@ -202,6 +254,11 @@
 }
 .contact-secA .flex-box .flex-item:last-child .flex-box .info p {
   margin-bottom: 15px;
+}
+@media only screen and (max-width: 768px) {
+  .contact-secA .flex-box .flex-item:last-child .flex-box .info p {
+    font-size: 14px;
+  }
 }
 .contact-secA .flex-box .flex-item:last-child .flex-box .info a {
   color: var(--secondary);
@@ -267,6 +324,21 @@
   max-width: 40%;
   margin: auto;
 }
+@media only screen and (max-width: 1024px) {
+  .contact-secB .heading {
+    max-width: 60%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .contact-secB .heading {
+    max-width: 80%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-secB .heading {
+    max-width: 100%;
+  }
+}
 .contact-secB .heading h2 {
   color: var(--primary);
   margin-bottom: 10px;
@@ -276,12 +348,23 @@
   margin: auto;
   padding: 50px 0;
 }
+@media only screen and (max-width: 991px) {
+  .contact-secB .form-div {
+    max-width: 90%;
+    padding: 50px 0 20px 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-secB .form-div {
+    padding: 20px 0;
+  }
+}
 .contact-secB .form-div .form-grid {
   --item: 2;
 }
 @media only screen and (max-width: 540px) {
   .contact-secB .form-div .form-grid {
-    --item: 2;
+    --item: 1;
   }
 }
 .contact-secB .form-div button {
@@ -302,15 +385,31 @@
   margin-bottom: -6.9px;
   padding: 50px 0 100px 0;
 }
+@media only screen and (max-width: 540px) {
+  .contact-secC {
+    padding: 50px 0;
+  }
+}
 .contact-secC .flex-box {
   display: flex;
   justify-content: space-between;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secC .flex-box {
+    display: block;
+  }
 }
 .contact-secC .flex-box .flex-box-item {
   width: 48%;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secC .flex-box .flex-box-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 .contact-secC .flex-box .flex-box-item h5 {
   font-family: Poppins;
@@ -320,10 +419,30 @@
   color: black;
   margin-bottom: 30px;
 }
+@media only screen and (max-width: 1024px) {
+  .contact-secC .flex-box .flex-box-item h5 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .contact-secC .flex-box .flex-box-item h5 {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-secC .flex-box .flex-box-item h5 {
+    margin-bottom: 10px;
+  }
+}
 .contact-secC .flex-box .flex-box-item iframe {
   border: 1px solid var(--primary);
   border-radius: 10px;
   height: 434px;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secC .flex-box .flex-box-item iframe {
+    height: 300px;
+  }
 }
 .contact-secC iframe {
   width: 100%;
