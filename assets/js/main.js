@@ -781,7 +781,7 @@ new Swiper('.client-review-slider', {
             speed: 500,
         },
         540: {
-            slidesPerView: 2,
+            slidesPerView: 1.2,
             spaceBetween: 20,
             speed: 700,
         },
@@ -791,7 +791,12 @@ new Swiper('.client-review-slider', {
             speed: 700,
         },
         991: {
-            slidesPerView: 3,
+            slidesPerView: 2,
+            spaceBetween: 70,
+            speed: 700,
+        },
+         1024: {
+            slidesPerView: 2,
             spaceBetween: 70,
             speed: 700,
         }
@@ -815,7 +820,7 @@ sliders.forEach((slider) => {
         speed: 500,
       },
       540: {
-        slidesPerView: 2,
+        slidesPerView: 1.2,
         spaceBetween: 20,
         speed: 700,
       },
@@ -825,7 +830,12 @@ sliders.forEach((slider) => {
         speed: 700,
       },
       991: {
-        slidesPerView: 4,
+        slidesPerView: 2,
+        spaceBetween: 20,
+        speed: 700,
+      },
+      1024: {
+        slidesPerView: 3,
         spaceBetween: 20,
         speed: 700,
       }

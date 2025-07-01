@@ -6,7 +6,7 @@
         &::before
             display: none
         .bg 
-            margin-top: 140px
+            margin-top: var(--headerheight)
             position: relative
             background-color: #FFE8DD
             height: 80vh
@@ -26,10 +26,12 @@
             left: 50%
             top: 86%
             transform: translate(-50%, -50%)
+            @include media(1024)
+                width: 100%
             @include media(768)
-                width: 400px
+                width: 100%
             @include media(540)
-                width: 300px
+                width: 100%
             .container
                 .content
                     h1
@@ -42,7 +44,7 @@
                         text-align: center
                         margin-bottom: 20px
                         @include media(1024)
-                            font-size: 70px
+                            font-size: 50px
                         @include media(991)  
                             font-size: 65px
                         @include media(768)
@@ -52,6 +54,8 @@
                             line-height: 1.1
                     h2
                         margin-bottom: 20px
+                        @include media(1024)
+                            font-size: 25px
         .pin-img
             position: absolute
             right: 0
@@ -104,6 +108,8 @@
         justify-content: space-between
         align-items: center
         gap: 50px
+        @include media(1024)
+            align-items: flex-start
         @include media(991)
             display: block
         .flex-item

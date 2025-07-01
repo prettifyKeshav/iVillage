@@ -12,7 +12,7 @@
             @include media(991)
                 height: 50vh
             @include media(540)
-                height: 50vh
+                height: 70vh
             &::before
                 content: ""
                 position: absolute
@@ -23,12 +23,16 @@
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 17.86%, rgba(0, 0, 0, 0.75) 83.52%)
         .banner-wrapper
             left: 50%
-            top: 80%
+            top: 90%
             transform: translate(-50%, -50%)
-            @include media(768)
-                width: 400px
+            @include media(1024)
+                width: 80%
+                top: 85%
+            @include media(991)
+                width: 100%
             @include media(540)
-                width: 300px
+                width: 100%
+                top: 90%
             .container
                 .content
                     h1
@@ -41,13 +45,14 @@
                         text-align: center
                         margin-bottom: 20px
                         @include media(1024)
-                            font-size: 70px
-                        @include media(991)  
-                            font-size: 65px
-                        @include media(768)
                             font-size: 50px
+                        @include media(991)  
+                            font-size: 38px
+                            margin-bottom: 10px
+                        @include media(768)
+                            font-size: 38px
                         @include media(540)
-                            font-size: 33px
+                            font-size: 25px
                             line-height: 1.1
                     p
                         color: $white
@@ -55,8 +60,15 @@
                         font-weight: 600
                         font-size: 16px
                         text-align: center
+                        @include media(1024)
+                            font-weight: 400
+                        @include media(991)
+                            font-weight: 300
+                            max-width: 80%
+                            margin: auto
                         @include media(540)
-                            display: none
+                            font-size: 12px
+                            max-width: 90%
         .pin-img
             position: absolute
             right: 0
@@ -104,23 +116,36 @@
     background: #fff
     overflow: hidden
     padding: 50px 0
+    @include media(540)
+        padding: 30px 0
     .flex
         display: flex
         justify-content: space-between
         align-items: center
         gap: 50px
+        @include media(1024)
+            gap: 20px
         @include media(991)
-            display: block
         .flex-item
             width: 48%  
             @include media(991)
-                width: 100%
         .flex-item:first-child
-            border-radius: 15px
             overflow: hidden
             @include media(991)
+                width: 35%
+                margin-top: 50px
                 margin-bottom: 30px 
+            @include media(540)
+                width: 100%
+                margin: 0
+            img
+                border-radius: 15px
+                overflow: hidden
         .flex-item:last-child
+            @include media(991)
+                width: 60%
+            @include media(540)
+                width: 100%
             .heading-img
                 width: 80px
                 margin: auto
@@ -134,12 +159,21 @@
                     margin-top: 0
                 h2
                     color: var(--primary)
+                    @include media(991)
+                        font-size: 30px
             p
                 font-family: Poppins
                 font-weight: 400
                 font-size: 16px
                 margin: 20px 0
                 color: $text
+                @include media(991)
+                    font-size: 14px
+                @include media(540)
+                    font-size: 12px
+                    text-align: center
+                    margin: 10px 0
+                
 
 .story-secB
     background: #fff
@@ -147,8 +181,14 @@
     .flex-box
         display: flex
         text-align: center
+        @include media(540)
+            display: block
         .flex-item
             padding: 100px 50px
+            @include media(991)
+                padding: 100px 0px
+            @include media(540)
+                padding: 50px 0px
             img
                 width: 50px
                 margin-bottom: 20px
@@ -157,6 +197,8 @@
                 font-weight: 600
                 font-size: 36px
                 margin-bottom: 10px
+                @include media(991)
+                    font-size: 30px
             p
                 font-family: Poppins
                 font-weight: 600
@@ -164,18 +206,32 @@
                 color: $white
                 width: 60%
                 margin: auto
+                @include media(1024)
+                    width: 90%
+                @include media(991)
+                    font-weight: 500
+                    font-size: 14px
+                @include media(540)
+                    font-weight: normal
 
         .flex-item:first-child
             background: #EA4A38
             width: 50%
+            @include media(540)
+                width: 100%
         .flex-item:last-child
             width: 50%
             background: #1DA9E1
+            @include media(540)
+                width: 100%
+
 
 .story-secC
     background: #fff
     padding: 50px 0 0px 0
     overflow: hidden
+    @include media(540)
+        padding: 0
     .communities
         background: #F6ECE2
         margin: 50px 0 0px 0
@@ -211,7 +267,7 @@
                     position: relative
                     top: 50px
                     @include media(540)
-                        width: 50px
+                        width: 70px
                     img
                         animation: wiggle 2s ease-in-out infinite
                         transform-origin: center
@@ -220,6 +276,8 @@
                 max-width: 50%
                 margin: auto
                 text-align: center
+                @include media(991)
+                    max-width: 100% 
                 @include media(540)
                     max-width: 100% 
 
@@ -227,14 +285,20 @@
                     font-weight: 600
                     font-size: 38px
                     line-height: 100%
+                    @include media(991)
+                        font-size: 28px
                     @include media(540)
                         font-size: 24px
                         line-height: 1.2
             .timeline
                 padding: 4rem 2rem
+                @include media(991)
+                    padding: 2rem 1rem
                 .timeline-container
                     position: relative
                     padding: 2rem 0
+                    @include media(540)
+                        padding: 1rem 0
                     .timeline-line
                         position: absolute
                         left: 50%
@@ -254,8 +318,12 @@
                         box-sizing: border-box
                         border-radius: 10px
                         background-color: white
+                        @include media(1024)
+                            max-width: 370px
                         @include media(991)
                             max-width: 100%
+                        @include media(540)
+                            padding: 20px 20px
                         &.left
                             left: 0
                             text-align: left
@@ -271,9 +339,16 @@
                                 height: 25px
                                 background: var(--white)
                                 position: absolute
-                                left: 595px
+                                left: 595px         
                                 top: 92px
                                 border: 8px solid #EA4A38
+                                @include media(1024)
+                                    left: 442px
+                                    top: 62px
+                                @include media(991)
+                                    left: -33px
+                                @include media(540)
+                                    top: 132px
                         &.right
                             left: 58%
                             text-align: left
@@ -289,13 +364,22 @@
                                 height: 25px
                                 background: var(--white)
                                 position: absolute
-                                left: -108px
+                                left: -110px
                                 top: 92px
                                 border: 8px solid #EA4A38
+                                @include media(1024)
+                                    left: -86px
+                                    top: 60px
+                                @include media(991)
+                                    left: -33px
+                                @include media(540)
+                                    top: 132px
                         .box
                             display: flex
                             align-items: flex-start
                             gap: 20px
+                            @include media(540)
+                                display: block
                             .box-image 
                                 margin: 0
                                 flex-shrink: 0
@@ -304,6 +388,8 @@
                                     height: auto
                                     border-radius: 10px
                                     object-fit: cover
+                                    @include media(1024)
+                                        width: 130px
                             
                             .box-content 
                                 flex: 1
@@ -314,12 +400,18 @@
                                     line-height: 24px
                                     color: black
                                     margin-bottom: 10px
+                                    @include media(540)
+                                        font-size: 15px
+                                        margin-bottom: 5px
                                 p
                                     font-family: Poppins
                                     font-weight: 400
                                     font-size: 14px
                                     line-height: 18px
                                     color: $text
+                                    @include media(540)
+                                        font-size: 12px
+
 
 .story-secD
     // border-bottom: 2px dashed var(--secondary)
@@ -341,12 +433,18 @@
         margin-top: 10px
         h2
             color: var(--primary)
+            @include media(991)
+                font-size: 30px
+            @include media(540)
+                font-size: 25px
+                max-width: 90%
+                margin: auto    
 
     .review-slider-part
         padding: 50px 0 
         position: relative
         @include media(540)
-        padding: 40px 0
+            padding: 40px 0 0 0
         .swiper-nav
             display: flex
             align-items: center
@@ -433,7 +531,7 @@
                     color: $text
                     max-width: 80%
                     margin: auto
-                    @include media(540)
+                    @include media(991)
                         font-size: 14px
             .bottom-sec
                 position: absolute
@@ -468,6 +566,10 @@
         height: 55vh
         object-fit: cover
         z-index: -1
+        @include media(991)
+            height: 31vh
+        @include media(540)
+            height: 60vh
         video
             top: 0 
             left: 0
@@ -476,8 +578,6 @@
             object-fit: cover
             z-index: -1
     
-    @include media(540)
-        padding: 30px 0 50px 0
         
     .main-container
         padding: 50px 0
@@ -485,20 +585,29 @@
         top: 0
         left: 0
         background: #612f23eb
+        @include media(540)
+            width: 100%
         .heading
             margin-bottom: 40px
+            @include media(991)
+                margin-bottom: 0
             h2
                 font-family: Poppins
                 font-weight: 600
                 font-size: 48px
                 color: white
+                @include media(991)
+                    font-size: 36px
                 @include media(540)
                     font-size: 30px
+                    margin-bottom: 40px
         .content
             .content-grid
                 display: grid
                 grid-template-columns: repeat(5, 1fr)
                 margin: 30px 80px 190px 80px
+                @include media(991)
+                    margin: 0
                 @include media(540)
                     grid-template-columns: repeat(2, 1fr)
                     gap: 40px
@@ -515,10 +624,14 @@
                     text-align: center
                     padding: 40px
                     gap: 15px
+                    @include media(540)
+                        gap: 10px
                     &:not(:last-child)
                         .text p
                             max-width: 80%
                             margin: auto
+                            @include media(540)
+                                font-size: 12px
                     @include media(991)
                         padding: 40px 10px
                     @include media(540)
@@ -528,6 +641,8 @@
                         font-weight: 600
                         font-size: 30px
                         text-align: center
+                        @include media(540)
+                            font-size: 25px 
 
                     .text p
                         font-family: Poppins
@@ -567,14 +682,22 @@
         h2
             color: var(--primary)
             margin-bottom: 10px
+            @include media(991)
+                font-size: 30px
         p
             max-width: 70%
             margin: auto
+            @include media(991)
+                font-size: 14px
+                max-width: 75%
+            @include media(540)
+                max-width: 90%
+                font-size: 12px
     .story-slider4-part
         padding: 50px 0 
         position: relative
         @include media(540)
-        padding: 40px 0
+        padding: 40px 0 0 0
         .swiper-nav
             display: flex
             align-items: center
@@ -662,6 +785,8 @@
                     p:last-child
                         font-size: 16px
                         color: #666666
+                        @include media(540)
+                            font-size: 14px
                 .social-icon
                     margin-bottom: 15px
                     display: flex
@@ -698,14 +823,21 @@
         h2
             color: var(--primary)
             margin-bottom: 10px
+            @include media(991)
+                font-size: 30px
         p
             max-width: 70%
             margin: auto
+            @include media(991)
+                font-size: 14px
+            @include media(540)
+                font-size: 12px 
+                max-width: 90%
     .story-slider4-part
         padding: 50px 0 
         position: relative
         @include media(540)
-        padding: 40px 0
+            padding: 40px 0 0 0
         .swiper-nav
             display: flex
             align-items: center
@@ -790,6 +922,8 @@
                     p:last-child
                         font-size: 16px
                         color: #666666
+                        @include media(991)
+                            font-size: 14px
                 .social-icon
                     margin-bottom: 15px
                     display: flex
@@ -811,7 +945,7 @@
     position: relative
     overflow: hidden
     @include media(540)
-        padding: 40px 0
+            padding: 40px 0 0 0
     .heading-img
         width: 80px
         margin: auto
@@ -825,9 +959,17 @@
         h2
             color: var(--primary)
             margin-bottom: 10px
+            @include media(991)
+                font-size: 30px
         p
-            max-width:70%
+            max-width: 70%
             margin: auto
+            @include media(991)
+                font-size: 14px
+            @include media(540)
+                max-width: 90%
+                font-size: 12px
+
     .story-slider4-part
         padding: 50px 0 
         position: relative
@@ -919,6 +1061,10 @@
                         font-size: 16px
                         color: #666666
                         line-height: 1.3
+                        @include media(540)
+                            font-size: 14px
+                            color: #666666
+                            line-height: 1.4
                 .social-icon
                     margin-bottom: 15px
                     display: flex
@@ -952,23 +1098,40 @@
             margin-top: 0
         h2
             color: var(--primary)
+            @include media(991)
+                font-size: 30px
+                max-width: 80%
+                margin: auto
+            @include media(540)
+                font-size: 20px
+                max-width: 100%
+                margin: 10px 0
     p
         font-family: Poppins
         font-weight: 400
         font-size: 16px
         margin: 20px 0
         color: $text
+        @include media(991)
+            font-size: 12px
+        @include media(540)
+            margin: 10px 0
+
     .flex
         display: flex
         justify-content: space-between
         align-items: center
         padding: 50px 0 0px 0
-        @include media(991)
+        @include media(540)
             display: block
+            padding: 20px 0 0px 0
         .flex-item
             .figure
                 width: 448px
                 height: 316px
+                @include media(991)
+                    width: auto
+                    height: auto
                 img
                     border-radius: 10px
 
@@ -978,14 +1141,25 @@
             width: 40% 
             @include media(991)
                 margin-bottom: 30px 
+            @include media(540)
+                width: 100%
+                margin-bottom: 20px
         .flex-item:last-child
-            width: 60%  
+            width: 60% 
+            @include media(1024)
+                width: 55%
+            @include media(540)
+                width: 100%
+                text-align: center
             
     .story-slider4-part
         padding: 50px 0 
         position: relative
+        @include media(1024)
+            max-width: 96%
+            margin: auto
         @include media(540)
-        padding: 40px 0
+        padding: 40px 0 0 0
         .swiper-nav
             @include media(540)
                 display: none
@@ -1008,6 +1182,8 @@
                     z-index: 2
                     right: -94%
                     top: 120px
+                    @include media(1024)
+                        right: -92%
                     &:hover
                         svg
                             translate: 5px 0
@@ -1031,6 +1207,8 @@
 .story-secJ
     overflow: hidden
     padding: 50px 0
+    @include media(540)
+        padding: 30px 0
     .heading-img
         width: 80px
         margin: auto
@@ -1051,8 +1229,13 @@
             align-items: center
             gap: 50px
             padding: 20px 0
+            @include media(540)
+                gap: 20px
+                padding: 20px 0
             li
                 position: relative
+                @include media(540)
+                    font-size: 14px
                 &::before
                     content: ""
                     position: absolute
@@ -1079,7 +1262,12 @@
                 align-items: center
                 padding: 20px 0 50px 0
                 gap: 50px
+                @include media(540)
+                    display: block
+                    padding: 10px 0 0 0
                 .flex-box-item:first-child
+                    @include media(540)
+                        margin-bottom: 20px
                     .figure
                         width: 446px
                         height: 242px
@@ -1089,11 +1277,21 @@
                         justify-content: center
                         align-items: center
                         padding: 30px
+                        @include media(991)
+                            width: auto
+                            height: auto
                 .flex-box-item:last-child
                     max-width: 40%
+                    @include media(991)
+                        max-width: none
                     p
                         color: #666666
                         margin-bottom: 20px
+                        @include media(991)
+                            font-size: 12px
+                        @include media(540)
+                            margin-bottom: 10px
+                            text-align: center
 
 .story-secK
     overflow: hidden
@@ -1103,26 +1301,44 @@
         justify-content: center
         align-items: center
         gap: 70px
+        @include media(1024)
+            gap: 50px
         @include media(991)
+            flex-wrap: nowrap
+            gap: 30px
+        @include media(540)
             display: block
+            gap: 30px
         .flex-item
             width: 48%  
             @include media(991)
-                width: 100%
+                width: 60%
         .flex-item:first-child
             width: 533px
-            height: 464px
-            border-radius: 10px
             overflow: hidden
+            @include media(1024)
+                width: 45%
             @include media(991)
                 margin-bottom: 30px 
+            @include media(540)
+                width: 100%
+            
+            img
+                border-radius: 10px
         .flex-item:last-child
+            @include media(540)
+                width: 100%
             .heading
                 @include media(540)
                     margin-top: 0
                 h2
                     color: var(--primary)
                     text-align: left
+                    @include media(991)
+                        font-size: 28px
+                    @include media(540)
+                        text-align: center
+                        font-size: 24px
                 p
                     font-family: Poppins
                     font-weight: 500
@@ -1131,22 +1347,44 @@
                     color: #000000
                     text-align: left
                     margin-bottom: 10px
+                    @include media(991)
+                        font-size: 16px
+                    @include media(540)
+                        text-align: center
+                        font-size: 14px
+                        margin: 3px 0 10px 0
             .content
                 p:first-child
                     font-family: Poppins
                     font-weight: 400
-                    font-size: 16px
+                    font-size: 12px
                     margin: 0px 0 20px 0
                     color: $text
+                    @include media(540)
+                        text-align: center
+                        margin: 0px 0 10px 0
                 p:last-child
                     color: $text
+                    font-size: 12px
                     margin: 0px 0 30px 0
-            a
-                border-radius: 25px
-                padding: 8px 21px
-                color: white
-                background: #EA4A38
-                margin: 20px 0 0 0
+                    @include media(540)
+                        text-align: center
+            .secondary-btn 
+                @include media(540)
+                    width: 100%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                a
+                    border-radius: 25px
+                    padding: 8px 21px
+                    color: white
+                    background: #EA4A38
+                    margin: 20px 0 0 0
+                    @include media(540)
+                        width: fit-content
+                        margin: auto
+                        text-align: center
 
 
 .story-secL
@@ -1165,11 +1403,19 @@
             margin-top: 0
         h2
             color: var(--primary)
+            @include media(991)
+                font-size: 30px
+            @include media(540)
+                font-size: 24px
+                margin-top: 5px
     .story-slider4-part
         padding: 0 0 50px 0 
         position: relative
+        @include media(1024)
+            max-width: 95%
+            margin: auto
         @include media(540)
-            padding: 40px 0
+            padding: 40px 0 0 0
         .swiper-nav
             @include media(540)
                 display: none
@@ -1192,6 +1438,10 @@
                     z-index: 2
                     right: -94%
                     top: 154px
+                    @include media(1024)
+                        right: -92%
+                    @include media(991)
+                        right: -90%
                     &:hover
                         svg
                             translate: 5px 0
