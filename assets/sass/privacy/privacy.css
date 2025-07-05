@@ -14,11 +14,11 @@
   }
 }
 .privacy-secA {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 @media only screen and (max-width: 675px) {
   .privacy-secA {
-    padding: 3rem 0;
+    padding: 5rem 0;
   }
 }
 

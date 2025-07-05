@@ -485,7 +485,35 @@ $(function () {
 
 
 
+// MORE BLOG DETAILS PAGE SLIDER START ======================>
 
+    new Swiper('.blog-details-slider', {
+        loop: false,
+        navigation: {
+            prevEl: '.blog-details-prev',
+            nextEl: '.blog-details-next',
+        },
+        
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+                speed: 500,
+            },
+            675: {
+                slidesPerView: 3,
+                spaceBetween: 12,
+                speed: 1000,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                speed: 1000,
+            }
+        }
+    });
+
+    // MORE BLOG DETAILS PAGE SLIDER END ======================>
 
 
 
